@@ -23,6 +23,6 @@ node1.disk_image = "urn:publicid:IDN+utah.cloudlab.us+image+noplab-PG0:small-lan
 link1 = request.Link(members = [node0, node1])
 
 # Write the request in rspec format
-node1.addService(rspec.Execute(shell="bash", command='/usr/local/apache2/bin/apachectl'))
+node1.addService(rspec.Execute(shell="bash", command='sudo /usr/local/apache2/bin/apachectl'))
 node0.addService(rspec.Execute(shell="bash", command='sudo /local/repository/generateData.sh'))
 portal.context.printRequestRSpec()
